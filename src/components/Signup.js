@@ -7,7 +7,7 @@ export const Signup = () => {
     <Formik
       initialValues={{
         firstName: "",
-        lastname: "",
+        lastName: "",
         email: "",
         password: "",
         confirmPassword: "",
@@ -16,9 +16,23 @@ export const Signup = () => {
       {(formik) => (
         <div>
           <h1>Sign Up</h1>
-          {console.log(formik)}
+          {console.log(formik.values)}
           <Form>
-            <Textfield />
+            <Textfield label="First Name" name="firstName" type="text" />
+            <Textfield label="Last Name" name="lastName" type="text" />
+            <Textfield label="email" name="email" type="email" />
+            <Textfield label="password" name="password" type="password" />
+            <Textfield
+              label="confirm password"
+              name="confirmPassword"
+              type="password"
+            />
+            <button className="btn btn-dark mt-3 ml-3" type="submit">
+              Register
+            </button>
+            <button className="btn btn-danger mt-3  ml-3" type="reset">
+              Reset
+            </button>
           </Form>
         </div>
       )}

@@ -9,7 +9,7 @@ function App() {
         <div className="col-md-5">
           <Signup />
         </div>
-        <div className="col-md-7">
+        <div className="col-md-7 my-auto">
           <img className="img-fluid w-100" src={randomImage} alt="" />
         </div>
       </div>
